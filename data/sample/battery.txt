@@ -1,0 +1,7 @@
+A battery converts stored chemical energy into electrical energy through
+electrochemical reactions. Each cell contains two electrodes separated by an
+electrolyte. During discharge the anode is oxidised and releases electrons,
+which travel through the external circuit to the cathode while ions move
+through the electrolyte. Rechargeable batteries reverse these reactions when
+charged. Energy density, power density, cycle life and safety are the main
+trade-offs in battery design, and electrode materials largely decide them.

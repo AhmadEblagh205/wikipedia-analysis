@@ -1,0 +1,43 @@
+{
+  "tfidf_convention": "relative TF * (1 + ln(N/df)); no L2 normalisation",
+  "sample": {
+    "documents": 3,
+    "tokens": 135,
+    "top_term_by_document": {
+      "battery": "energy",
+      "catalysis": "catalyst",
+      "probability": "explains"
+    },
+    "cosine_similarity": {
+      "battery": {
+        "battery": 1.0,
+        "catalysis": 0.04147723851176697,
+        "probability": 0.0
+      },
+      "catalysis": {
+        "battery": 0.04147723851176697,
+        "catalysis": 1.0,
+        "probability": 0.0
+      },
+      "probability": {
+        "battery": 0.0,
+        "catalysis": 0.0,
+        "probability": 1.0
+      }
+    }
+  },
+  "sklearn_validation": {
+    "max_abs_tfidf_weight_error": 1.3877787807814457e-17,
+    "max_abs_cosine_error": 8.881784197001252e-16
+  },
+  "corpus_dependence": {
+    "background_documents": 20,
+    "base_similarity": 0.25861529161577274,
+    "augmented_similarity": 0.05638050141068369,
+    "relative_change": -0.7819908441669075
+  },
+  "bigram_order": {
+    "unigram_similarity": 1.0,
+    "unigram_plus_bigram_similarity": 0.3435051014342031
+  }
+}

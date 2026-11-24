@@ -1,0 +1,6 @@
+Probability theory studies random phenomena by assigning numbers between
+zero and one to events. The law of large numbers explains why averages of
+repeated experiments settle towards expected values, and the central limit
+theorem explains why sums of many independent effects look normally
+distributed. Conditional probability and Bayes' theorem describe how
+evidence should update beliefs, forming the basis of statistical inference.

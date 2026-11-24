@@ -1,0 +1,7 @@
+Catalysis increases the rate of a chemical reaction by providing an
+alternative pathway with a lower activation energy. The catalyst is not
+consumed by the reaction. Heterogeneous catalysis, where the catalyst is in
+a different phase from the reactants, dominates industrial chemistry: solid
+catalysts convert gases in processes such as ammonia synthesis and methanol
+synthesis. Catalyst activity, selectivity and deactivation over time decide
+the economics of a catalytic process.
