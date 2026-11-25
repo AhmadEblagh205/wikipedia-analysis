@@ -106,3 +106,15 @@ It does **not** establish:
 - search/recommendation quality;
 - empirical properties of Wikipedia as a whole;
 - causal or behavioural conclusions from article text.
+
+## Notes moved from the README
+
+Fixes made in the audit of the original rebuild:
+
+- The old README said bigrams and cosine similarity were delivered, but the CLI exposed neither. Both are now available through `--bigrams` and `--similarity`.
+- The exact TF-IDF convention was not stated. It is now TF = count / document length and IDF = 1 + ln(N / df), with no L2 normalisation, and `src/audit.py` configures scikit-learn to match it.
+- Cosine values were rounded inside the analytical function. They are now rounded only for display.
+- The tokeniser was ASCII-only and mishandled accented words and apostrophe variants.
+- The fetch User-Agent did not include the contact route Wikimedia asks automated clients to give. The fetcher also called short summary extracts "articles" and saved no retrieval provenance. It now sends a descriptive User-Agent with a website contact route, requests serially with a configurable delay, URL-encodes titles, fails if no usable extract is returned and writes `_manifest.json` with source metadata and retrieval time.
+- The bundled demo's top terms did not match the old prose. On the 3 hand-written documents (135 cleaned unigram tokens) the top terms are `energy` (battery), `catalyst` (catalysis) and a four-way tie in the probability sample (`explains`, `numbers`, `probability`, `theorem`), where the alphabetical tie-break prints `explains`. A top TF-IDF term need not be unique to one document, and exact ties are not substantive rank differences.
+- Cosine similarity here is lexical similarity in the chosen TF-IDF feature space. It is not a semantic-similarity score or evidence of retrieval quality. For ranked search with labelled evaluation, see the separate grep-search-engine project.
